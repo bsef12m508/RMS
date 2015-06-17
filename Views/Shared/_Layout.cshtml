@@ -30,7 +30,7 @@
         }
 
         #option {
-            margin-left: 25%;
+            margin-left: 20%;
             margin: 0.5%;
         }
        /*#logo:hover { 
@@ -111,29 +111,28 @@
                     <div class="nav navbar-header" id="logo">
                         <a class="navbar-brand " href="/Home/Index" style="color:black;">Pakistan Railways</a>
                     </div>
-                    <div class="nav navbar-collapse collapse pull-right">
+                    <div class=" class=" collapse navbar-collapse"">
                         <div id="option">
-                            <ul class="nav navbar-nav" id="menu">
-                                <li class=" active" ><a href="/Home/Index" style="color:black;">Home</a></li>
-                                <li class=" active"><a href="/Home/Routes" style="color:black;">Trains</a></li>
-                                <li class=" active"><a href="/Home/Fares" style="color:black;">Fares</a></li>
-                                <li class=" active"><a href="/Home/ViewTickets" style="color:black;">My Tickets</a></li>
-                                <li class=" active"><a href="/Home/Contact" style="color:black;">Contact</a></li>
+                            <ul class="nav navbar-nav navbar-center" id="menu">
+                                    <li class=" active"><a href="/Home/Index" style="color:black;">Home</a></li>
+                                    <li class=" active"><a href="/Home/Routes" style="color:black;">Trains</a></li>
+                                    <li class=" active"><a href="/Home/Fares" style="color:black;">Fares</a></li>
+                                    <li class=" active"><a href="/Home/ViewTickets" style="color:black;">My Tickets</a></li>
+                                    <li class=" active"><a href="/Home/Contact" style="color:black;">Contact</a></li>
+                                    <li class=" active"><a href="/Home/About" style="color:black;">About</a></li>
+                                    @if (Session["id"] == null)
+                                    {
+                                        <li class=" active"><a href="/Home/Login" style="color:black;">SignIn</a></li>
+                                        <li class=" active"><a href="/Home/Signup" style="color:black;">SignUp</a></li>
+                                    }
+                                    @if (Session["id"] != null)
+                                    {
 
-                                @if(Session["id"] == null)
-                                {
-                                    <li class=" active"><a href="/Home/Login" style="color:black;">SignIn</a></li>
-                                    <li class=" active"><a href="/Home/Signup" style="color:black;">SignUp</a></li>
-                                }
-                                @if (Session["id"] != null)
-                                {
-                                    
-                                    <li class=" active"><a href="/Home/Logout" style="color:black;">Logout</a></li>
-                                }
-                            <li class=" active"><a href="/Home/About" style="color:black;">About</a></li>
-                                
-                            </ul>
-                        </div>
+                                        <li class=" active"><a href="/Home/Logout" style="color:black;">Logout</a></li>
+                                    }
+
+                                </ul>
+</div>
                     </div>
                 </nav>
             </div>
