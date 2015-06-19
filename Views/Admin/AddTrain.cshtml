@@ -29,8 +29,7 @@
             var c = document.getElementById("price").value;
 
             $.getJSON('/Admin/add_class?title=' + a + '&seats=' + b + '&price=' + c, function (data) {
-                alert("Class has been added successfully.");
-                $('#added').append("==> " + a + " has been added successfully.");
+                $('#added').append("==> " + a + " has been added successfully.</br>");
             }
             );
         }
